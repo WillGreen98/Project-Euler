@@ -9,7 +9,7 @@ def palindrome_check(number):
 def largestPalindrome():
     for i in range(100, 999, 1):
         for j in range(100, 999, 1):
-            product = i * j
+            product = i * j # Mathematically = xyz * abc
             if palindrome_check(product):
                 palindromes.append(product)
     return max(palindromes)
