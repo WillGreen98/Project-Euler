@@ -195,5 +195,14 @@ venv.bak/
 
 .idea/
 *.xml
+<<<<<<< HEAD
 .idea/Project Euler.iml
 .idea/misc.xml
+=======
+*.xml
+*.iml
+*.iml
+*.xml
+*.iml
+*.xml
+>>>>>>> a261c5fc98d5b4c211dd754a0387cbea436a6fd2
