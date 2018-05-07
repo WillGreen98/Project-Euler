@@ -10,4 +10,3 @@ for i in range(math.pow(10,3)):
         count_T += i
     print(i)
 print(count_T)
-    

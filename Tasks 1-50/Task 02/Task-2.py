@@ -14,19 +14,21 @@ def fib(fib_n, fib_c):
         nums[fib_c] = fib_n(fib_c)
         return nums[fib_c]
 
+def main():
+    fib_total = 0
+    fib_even = lambda fn: (fn % 2 == 0)
 
-fib_total = 0
-fib_even = lambda fn: (fn % 2 == 0)
+    for i in range(0, 4000000, 1):
+        fibn = fib(fibonacci, i)
 
-for i in range(0, 4000000, 1):
-    fibn = fib(fibonacci, i)
+        if fib_even(fibn):
+            fib_total += fibn
 
-    if fib_even(fibn):
-        fib_total += fibn
+    print(fibn)
+    print(fib_total)
 
-print(fibn)
-print(fib_total)
-
+if __name__ == '__main__':
+    main()
 
 
 

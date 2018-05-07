@@ -12,3 +12,9 @@ def lpf():
             if primeNum_c == True: print("{0} is prime".format(primeNum_c))
             primeNum_i = is_prime(i)
             if primeNum_i == True: print("{0} is prime".format(primeNum_i))
+
+def main():
+    lpf()
+
+if __name__ == '__main__':
+    main()

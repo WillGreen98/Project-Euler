@@ -14,5 +14,8 @@ def largestPalindrome():
                 palindromes.append(product)
     return max(palindromes)
 
-print(largestPalindrome())
+def main():
+    print(largestPalindrome())
 
+if __name__ == '__main__':
+    main()

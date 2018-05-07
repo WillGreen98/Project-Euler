@@ -11,4 +11,8 @@ def gcd(a, b):
 def lcm(a, b):
     return (a * b) / gcd(a, b)
 
-print(int(reduce(lcm, range(1, 20, 1))))
+def main():
+    print(int(reduce(lcm, range(1, 20, 1))))
+
+if __name__ == '__main__':
+    main()
