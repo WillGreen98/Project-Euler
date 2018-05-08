@@ -15,7 +15,7 @@ def collatz_seq():
             cache[0] = num
             cache[1] = i
 
-    return cache[0], "contains Collatz terms: ", cache[1]
+    return cache[0], "contains Collatz terms:", cache[1]
 
 def main():
     time_start = time.time()
