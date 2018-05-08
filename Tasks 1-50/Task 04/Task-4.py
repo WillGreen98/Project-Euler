@@ -1,6 +1,8 @@
 # Task 4 - Python
 # Largest Palindrome Product
 
+import time
+
 palindromes = []
 
 def palindrome_check(number):
@@ -15,7 +17,10 @@ def largestPalindrome():
     return max(palindromes)
 
 def main():
-    print(largestPalindrome())
+    time_start = time.time()
+    largest_palindrome = largestPalindrome()
+
+    print("Answer: {0} => Calculated in: {1}".format(largest_palindrome, (time.time() - time_start)))
 
 if __name__ == '__main__':
     main()

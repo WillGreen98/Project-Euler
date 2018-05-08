@@ -2,6 +2,7 @@
 # 10001st Prime
 
 import math
+import time
 
 primes = []
 
@@ -18,4 +19,11 @@ def prime(n):
         i += 1
     return -1
 
-print(prime(10001))
+def main():
+    time_start = time.time()
+    nth_prime = prime(10001)
+
+    print("Answer: {0} => Calculated in: {1}".format(nth_prime, (time.time() - time_start)))
+
+if __name__ == '__main__':
+    main()

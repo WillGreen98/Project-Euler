@@ -1,6 +1,7 @@
 # Task 8 - Python
 # Largest Product In A Series
 
+import time
 from functools import reduce
 
 number = "73167176531330624919225119674426574742355349194934\
@@ -24,8 +25,18 @@ number = "73167176531330624919225119674426574742355349194934\
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450"
 
-# Needless to say, I have no idea and this is just C & V
-print(max([reduce(lambda accum, x:
-            accum * x, [int(x)
-            for x in number[i:i+5]])
-            for i in range(len(number) - 5)]))
+def lps():
+    # Needless to say, I have no idea and this is just C & V
+    print(max([reduce(lambda accum, x:
+                accum * x, [int(x)
+                for x in number[i:i+5]])
+                for i in range(len(number) - 5)]))
+
+def main():
+    time_start = time.time()
+    largest_product = lps()
+
+    print("Answer: {0} => Calculated in: {1}".format(largest_product, (time.time() - time_start)))
+
+if __name__ == '__main__':
+    main()

@@ -2,6 +2,7 @@
 # Smallest Multiple
 
 import math
+import time
 from functools import reduce
 
 def gcd(a, b):
@@ -12,7 +13,10 @@ def lcm(a, b):
     return (a * b) / gcd(a, b)
 
 def main():
-    print(int(reduce(lcm, range(1, 20, 1))))
+    time_start = time.time()
+    smallest_multiple = (int(reduce(lcm, range(1, 20, 1))))
+
+    print("Answer: {0} => Calculated in: {1}".format(smallest_multiple, (time.time() - time_start)))
 
 if __name__ == '__main__':
     main()
