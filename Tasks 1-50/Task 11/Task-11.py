@@ -25,13 +25,12 @@ grid = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8]
 [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
 def largest_four_sum():
-    horizontal = max(grid[i][j] * grid[i][j + 1] * grid[i][j + 2] * grid[i][j + 3] for i in range(20) for j in range(17))
-    vertical = max(grid[i][j] * grid[i + 1][j] * grid[i + 2][j] * grid[i + 3][j] for i in range(17) for j in range(20))
-    diagonal_bottom_left = max(grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3] for i in range(17) for j in range(17))
-    diagonal_top_right = max(grid[i][j] * grid[i - 1][j + 1] * grid[i - 2][j + 2] * grid[i - 3][j + 3] for i in range(3, 20) for j in range(17))
+    horizontal = max(grid[row][col] * grid[row][col + 1] * grid[row][col + 2] * grid[row][col + 3] for row in range(20) for col in range(20))
+    vertical = max(grid[row][col] * grid[row + 1][col] * grid[row + 2][col] * grid[row + 3][col] for row in range(20) for col in range(20))
+    diagonal_bottom_left = max(grid[row][col] * grid[row + 1][col + 1] * grid[row + 2][col + 2] * grid[row + 3][col + 3] for row in range(20) for col in range(20))
+    diagonal_top_right = max(grid[row][col] * grid[row - 1][col + 1] * grid[row - 2][col + 2] * grid[row - 3][col + 3] for row in range(20) for col in range(20))
 
-    largest_sum = max(horizontal, vertical, diagonal_bottom_left, diagonal_top_right)
-    return largest_sum
+    return max(horizontal, vertical, diagonal_bottom_left, diagonal_top_right)
 
 def main():
     time_start = time.time()
