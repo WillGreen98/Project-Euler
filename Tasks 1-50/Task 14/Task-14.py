@@ -10,12 +10,12 @@ def collatz_seq():
 
     for i in range(1000000):
         num = collatz_rule(i)
-        
+
         if num > cache[0]:
             cache[0] = num
             cache[1] = i
 
-    return cache[0], "with Collatz length: ", cache[1]
+    return cache[0], "contains Collatz terms: ", cache[1]
 
 def main():
     time_start = time.time()
