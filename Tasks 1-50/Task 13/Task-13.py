@@ -14,7 +14,7 @@ def main():
     time_start = time.time()
     l_sum = large_sum()
 
-    print("Answer: {0} => Calculated in: {1}".format(l_sum, (time.time() - time_start)))
+    print("Answer: {0:10} => Calculated in: {1}".format(l_sum, (time.time() - time_start)))
 
 if __name__ == '__main__':
     main()
