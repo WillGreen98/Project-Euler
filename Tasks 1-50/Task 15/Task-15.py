@@ -1,5 +1,5 @@
-# Task 14 - Python
-# Longest Collatz sequence
+# Task 15 - Python
+# Lattice Paths
 
 import time
 from functools import reduce
