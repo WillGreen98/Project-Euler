@@ -4,28 +4,28 @@
 import time
 
 nums = {}
+num_to_check = 4000000
 
-def fibonacci(n):
-    fn_1, fn_2 = 1, 1
-    for i in range(n - 1):
-        fn_1, fn_2 = fn_2, fn_1 + fn_2
-    return fn_1
+def fibonacci(fib_limit):
+    a, b = 1, 1
+    for i in range(1, fib_limit):
+        a, b = b, a + b
+    return a
 
-def fib(fib_n, fib_c):
-    if fib_c not in nums:
-        nums[fib_c] = fib_n(fib_c)
-        return nums[fib_c]
+#  Memoize / Caching because of recursion limit being < 4000000
+def fibonacci_gen(fib_limit, i):
+    if i not in nums:
+        nums[i] = fib_limit(i)
+    return nums[i]
 
 def sum_even_fib():
-    fib_total = 0
-    fib_even = lambda fn: (fn % 2 == 0)
+    sum = 0
 
-    for i in range(0, 4000000, 1):
-        fibn = fib(fibonacci, i)
-
-        if fib_even(fibn):
-            fib_total += fibn
-    return fib_total
+    for i in range(35):  # I had to guess 35...
+        fib_num = fibonacci_gen(fibonacci, i)
+        if fib_num % 2 == 0:
+            sum += fib_num
+    return sum
 
 def main():
     time_start = time.time()
@@ -35,7 +35,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-

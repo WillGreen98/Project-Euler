@@ -8,14 +8,17 @@ def factor_finder(n):
     i = 1
     num_factors = 0
 
-    for nums in range(i*i<=n):
-        if n % i == 0: num_factors += 1
+    for nums in range(i * i <= n):
+        if n % i == 0:
+            num_factors += 1
     return num_factors
 
 def triangular_number():
     num_to_check = 1
-    while factor_finder(num_to_check) < 500:
+    while factor_finder(num_to_check) <= 500:
         num_to_check += 1
+
+    return num_to_check
 
 def main():
     time_start = time.time()
