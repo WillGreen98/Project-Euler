@@ -3,7 +3,7 @@ I am attempting to tackle the infamous problem-sets of the Project Euler.
 
 ## Programming Approaches
 
-*Code
+* Code
     * Programmatic
     * Utilisation of Theoretical & Conceptual Maths
 
