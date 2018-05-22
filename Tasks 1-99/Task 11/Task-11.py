@@ -27,10 +27,10 @@ grid = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8]
 def largest_four_sum():
     x = max(grid[row][col] * grid[row][col + 1] * grid[row][col + 2] * grid[row][col + 3] for row in range(20) for col in range(20))
     y = max(grid[row][col] * grid[row + 1][col] * grid[row + 2][col] * grid[row + 3][col] for row in range(20) for col in range(20))
-    xy_bottom_left = max(grid[row][col] * grid[row + 1][col + 1] * grid[row + 2][col + 2] * grid[row + 3][col + 3] for row in range(20) for col in range(20))
-    xy_top_right = max(grid[row][col] * grid[row - 1][col + 1] * grid[row - 2][col + 2] * grid[row - 3][col + 3] for row in range(20) for col in range(20))
+    xy_bottom_left_up = max(grid[row][col] * grid[row + 1][col + 1] * grid[row + 2][col + 2] * grid[row + 3][col + 3] for row in range(20) for col in range(20))
+    xy_top_left_down = max(grid[row][col] * grid[row - 1][col + 1] * grid[row - 2][col + 2] * grid[row - 3][col + 3] for row in range(20) for col in range(20))
 
-    return max(x, y, xy_bottom_left, xy_top_right)
+    return max(x, y, xy_bottom_left_up, xy_top_left_down)
 
 def main():
     time_start = time.time()

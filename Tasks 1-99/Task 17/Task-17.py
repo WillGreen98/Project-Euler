@@ -14,15 +14,17 @@ num_ln = {1: "One",
           8: "Eight",
           9: "Nine"}
 
-def count_letters(num_to_check):
-    num_list = list(map(int, str(num_to_check)))
+def count_letters():
+    num_list = list(map(int, str(34)))
 
-    count = 0
-    for i in range(1, 1000, 1):
-        for n in num_list:
-            word_length = len(num_ln[n])
-            count += word_length
-    return count
+    # count = 0
+    # for i in range(1, 1000, 1):
+    #     for n in i:
+    #         word_length = len(num_ln[i])
+    #         count += word_length
+    # return count
+
+    return len(num_ln[num_list[0]])
 
 def main():
     time_start = time.time()
