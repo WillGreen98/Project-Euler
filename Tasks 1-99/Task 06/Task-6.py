@@ -19,7 +19,6 @@ def square_values():
 
     return product, "-", total_i, "= ", product - total_i
 
-
 def main():
     time_start = time.time()
     sqaure_products = square_values()

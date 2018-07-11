@@ -4,15 +4,17 @@
 import math
 import time
 
-num_ln = {1: "One",
-          2: "Two",
-          3: "Three",
-          4: "Four",
-          5: "Five",
-          6: "Six",
-          7: "Seven",
-          8: "Eight",
-          9: "Nine"}
+num_ln = { ln : len(word) for (ln, word) in {
+        1: "One",
+        2: "Two",
+        4: "Four",
+        3: "Three",
+        5: "Five",
+        6: "Six",
+        7: "Seven",
+        8: "Eight",
+        9: "Nine"}.items()
+}
 
 def count_letters():
     num_list = list(map(int, str(34)))

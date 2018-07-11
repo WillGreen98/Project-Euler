@@ -1,7 +1,6 @@
 # Task 12 - Python
 # Highly Divisible Triangular Number
 
-import math
 import time
 
 triangular_nth = lambda n: (n * (n + 1)) / 2
@@ -15,7 +14,6 @@ def triangular_number():
 def main():
     time_start = time.time()
     triangular_num = triangular_number()
-    # triangular_num = triangular_f(7)
 
     print("Answer: {0} => Calculated in: {1}".format(triangular_num, (time.time() - time_start)))
 

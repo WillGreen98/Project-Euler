@@ -26,9 +26,8 @@ number = "73167176531330624919225119674426574742355349194934\
 71636269561882670428252483600823257530420752963450"
 
 def lps():
-    # Needless to say, I have no idea and this is just C & V
-    print(max([reduce(lambda accum, x:
-                accum * x, [int(x)
+    return (max([reduce(lambda sum, x:
+                sum * x, [int(x)
                 for x in number[i:i+5]])
                 for i in range(len(number) - 5)]))
 
