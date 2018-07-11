@@ -4,11 +4,11 @@
 import math
 import time
 
-num_ln = { ln : len(word) for (ln, word) in {
+num_ln = {ln: len(number) for (ln, number) in {
         1: "One",
         2: "Two",
-        4: "Four",
         3: "Three",
+        4: "Four",
         5: "Five",
         6: "Six",
         7: "Seven",
@@ -17,16 +17,15 @@ num_ln = { ln : len(word) for (ln, word) in {
 }
 
 def count_letters():
-    num_list = list(map(int, str(34)))
+    num_list = list(map(int, num_ln))
 
-    # count = 0
-    # for i in range(1, 1000, 1):
-    #     for n in i:
-    #         word_length = len(num_ln[i])
-    #         count += word_length
-    # return count
+    count = 0
+    for i in range(1, 1000, 1):
+        for num_list in i:
+            word_length = len(num_ln[i])
+            count += word_length
 
-    return len(num_ln[num_list[0]])
+    return num_ln[3]
 
 def main():
     time_start = time.time()
