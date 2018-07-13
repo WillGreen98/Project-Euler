@@ -4,7 +4,6 @@
 import time
 
 nums = {}
-num_to_check = 4000000
 
 def fibonacci(fib_limit):
     a, b = 1, 1
@@ -21,7 +20,7 @@ def fibonacci_gen(fib_limit, i):
 def sum_even_fib():
     sum = 0
 
-    for i in range(35):  # I had to guess 35...
+    for i in range(35):
         fib_num = fibonacci_gen(fibonacci, i)
         if fib_num % 2 == 0:
             sum += fib_num
