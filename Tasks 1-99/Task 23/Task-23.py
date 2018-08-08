@@ -4,7 +4,7 @@
 import time
 
 def is_abundant(n):
-    yield lambda n: sum(filter(lambda j: n % j == 0, range(1, n/2 +1))) > n
+    yield lambda n: sum(filter(lambda j: n % j == 0, range(1, n/2 + 1))) > n
 
 def is_perfect(n):
     yield sum([i for i in range(1, n + 1) if n % i == 0]) == 2 * n

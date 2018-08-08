@@ -206,3 +206,4 @@ venv.bak/
 *.iml
 *.xml
 >>>>>>> a261c5fc98d5b4c211dd754a0387cbea436a6fd2
+.idea/misc.xml
